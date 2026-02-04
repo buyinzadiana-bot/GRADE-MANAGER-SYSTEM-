@@ -68,7 +68,28 @@ public class GradeManager {
                 }
             }
         }
-
     }
+
+public boolean searchGrades(int target){
+        for (int i = 0; i < count; i++){
+            if (grades [i] == target){
+                return true;
+            }
+        }
+        return false;
+}
+
+public void displayGrades(){
+        if (count == 0){
+            System.out.println("No grades display.");
+            return;
+        }
+    System.out.println("Grades:");
+        for (int i =0; i < count; i++){
+            System.out.println(grades[i] + "");
+        }
+    System.out.println();
+}
+
 
 }
