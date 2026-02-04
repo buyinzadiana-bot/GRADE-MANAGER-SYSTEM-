@@ -43,6 +43,32 @@ public class GradeManager {
         return max;
     }
 
-    P
+    public int getlowestGrdes(){
+        if (count == 0){
+            throw new IllegalStateException("No grades available.");
+        }
+        int min =grades[0];
+        for (int i = 1; i < count; i++){
+
+        if (grades[i] < min){
+            min = grades [i];
+        }
+
+        }
+        return min;
+    }
+
+    public void sortGrades(){
+        for (int i = 0; i < count - 1; i++){
+            for (int j = i = 1; j< count; j++){
+                if (grades [i] > grades [j]){
+                    int temp = grades [i];
+                    grades[i] = grades [j];
+                    grades [j] = temp;
+                }
+            }
+        }
+
+    }
 
 }
