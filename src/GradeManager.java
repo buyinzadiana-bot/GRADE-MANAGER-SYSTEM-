@@ -20,5 +20,29 @@ public class GradeManager {
         grades [count]=grade;
         count++;
     }
+    public double calculateAverage() {
+        if (count == 0) {
+            throw new IllegalStateException("No grades available.");
+        }
+        int sum = 0;
+        for (int i = 0; i <count; i++){
+            sum += grades[i];
+        }
+        return (double) sum / count;
+    }
+    public int getHighestGrades(){
+        if (count == 0){
+            throw new IllegalStateException("No grades available.");
+        }
+        int max = grades[0];
+        for (int i =1; i < count; i++){
+            if (grades [i] > max){
+                max = grades [i];
+            }
+        }
+        return max;
+    }
+
+    P
 
 }
